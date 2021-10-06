@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+type User = {
+  name: string;
+  age: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -6,32 +11,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ang';
-  name = 'ToDoList';
+  
+  text: string | undefined;
+  age = 25;
 
-  products = [{
-    name: 'make piece with my Bubochka',
-    time: 'as soon as possible',
-    reason: 'because he understands me better than anyone',
-    status: true
-  }, {
-    name: 'make piece with my Bubochka',
-    time: 'very fast because we just can`t fight long...it is not good thing to do together',
-    reason: 'because i need him very much',
-    status: true
-  }, {
-    name: 'make piece with my Bubochka',
-    time: 'we can`t fight long because you can`t live long without me:))))',
-    reason: 'because i am sorry i am very deep digger...sorry',
-    status: false
-  }]
+  ngOnInit() {
+    this.text = 'some string';
 
-  isOpenMenu = false;
-
-  openDropDown() {
-    this.isOpenMenu = !this.isOpenMenu
   }
 
-}
 
+
+  user1: User = {
+    name: 'Poli',
+    age: 34
+  }
+  user2: User = {
+    name: 'Sedrik',
+    age: 13
+  }
+  user3: User = {
+    name: 'Arni',
+    age: 56
+  }
+  
+
+}
 
